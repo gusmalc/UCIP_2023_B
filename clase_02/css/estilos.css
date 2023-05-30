@@ -1,0 +1,18 @@
+h1{
+    color: #00f;
+    font-size: 40px;
+}
+
+h2{
+    color: #f00;
+}
+
+body{
+    background-color: #222;
+    color: #fff;
+}
+
+#titulo_verde{
+    color: #0f0;
+    font-size: 100px;
+}
