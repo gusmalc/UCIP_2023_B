@@ -1,0 +1,65 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;    
+}
+html {
+  scroll-behavior: smooth;
+}
+body{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #222;
+}
+
+#padre{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:    "a a a" 
+                            "b b d" 
+                            "e e e" 
+                            "f g h";
+    gap: 10px;
+}
+
+#aa{
+    grid-area: a;
+    height: 100px;
+    background: #f00;
+}
+#bb{
+    grid-area: b;
+    height: 100px;
+    background: #f00;
+}
+#cc{
+    grid-area: c;
+    height: 100px;
+    background: #f00;
+}
+#dd{
+    grid-area: d;
+    height: 100px;
+    background: #f00;
+}
+#ee{
+    grid-area: e;
+    height: 100px;
+    background: #f00;
+}
+#ff{
+    grid-area: f;
+    height: 100px;
+    background: #f00;
+}
+#gg{
+    grid-area: g;
+    height: 100px;
+    background: #f00;
+}
+#hh{
+    grid-area: h;
+    height: 100px;
+    background: #f00;
+}
