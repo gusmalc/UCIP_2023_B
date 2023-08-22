@@ -1,0 +1,27 @@
+:root{
+    --color1: #eba4a4;
+    --radios: 0px;
+}
+
+
+
+
+#sx{
+    background: var(--color1);
+}
+#dx{
+    background: #0f0;
+}
+#ex{
+    background: #0ff;
+}
+#fx{
+    background: #ff0;
+}
+
+.btn{
+    border-radius: var(--radios) !important;
+}
+/* .bg-body-tertiary{
+    background-color: #f00 !important;
+} */
