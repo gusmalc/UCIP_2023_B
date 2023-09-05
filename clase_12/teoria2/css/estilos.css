@@ -1,0 +1,57 @@
+#caja_padre{
+    width: 300px;
+    height: 300px;
+    background: #222;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in;
+}
+
+#caja_hijo{
+    width: 100px;
+    height: 100px;
+    background: #f00;
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: ease-in;
+}
+
+#padre>div{
+    background: #f00;
+    color: #fff;
+    width: 300px;
+    height: 50px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    cursor: pointer;
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in;
+}
+
+#padre>div:hover{
+    background: #2c0303;
+    transform: translateX(10px) rotate(5deg) scale(2);
+}
+
+#padre{
+    display: inline-block;
+    background: #ccc;
+    padding: 20px;
+   
+}
+
+#respuesta{
+    width: 300px;
+    height: 50px;
+    background: #222;
+    margin-top: 20px;
+}
+
+.fondo_amarillo{
+    background: #bbff00 !important;
+    transform: rotate(30deg);
+}
