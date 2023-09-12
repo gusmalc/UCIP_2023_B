@@ -1,5 +1,6 @@
 let btn1 = document.getElementById('btn1');
 let app = document.getElementById('app');
+let titulo = document.getElementById('titulo');
 
 btn1.addEventListener('click',carga_lista);
 
@@ -23,7 +24,7 @@ function carga_lista(){
 
 
 function crear_tabla(uu){
-
+titulo.innerHTML = "<h1>Lista Usuarios</h1>";
     let tabla = `
     <table class="table table-striped">
     <thead>
@@ -39,7 +40,7 @@ function crear_tabla(uu){
 
     uu.forEach(u => {
         tabla += `
-        <tr>
+        <tr onclick="carga_datos_usuario(${u.id})">
         <td>${u.id}</td>
         <td>${u.name}</td>
         <td>${u.email}</td>
@@ -55,4 +56,31 @@ function crear_tabla(uu){
 
     app.innerHTML = tabla;
 
+}
+
+
+function carga_datos_usuario(id){
+    
+    fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
+    .then(res=> res.json() )
+    .then(datos_usuario =>{
+        mostar_datos(datos_usuario)
+    })
+    .catch(err=>{
+        console.log(err.message);
+    });
+}
+
+function mostar_datos(datos){
+    //titulo.innerHTML = "<h2 style='color: #0f0'>Datos Usuario</h2>";
+    titulo.innerHTML = "<h2 class='color_rojo'>Datos Usuario</h2>";
+    let d = `
+    <div class="datos">
+    <h1>NOMBRE: ${datos.name}</h1>
+    <h2>TELEFONO: ${datos.phone}</h2>
+    <h2>${datos.email}</h2>
+    <h2>${datos.company.name}</h2>
+    </div>
+    `
+    app.innerHTML = d;
 }
